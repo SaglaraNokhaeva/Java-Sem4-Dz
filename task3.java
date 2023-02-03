@@ -57,8 +57,14 @@ public class task3 {
             System.out.printf("%f : %f = %f", number1, number2, rezult);
         }
         
-        
+
         stack.push(rezult);
+
+        private static Float Calc(Float list1) {
+            LinkedList<Integer> transp_list = new LinkedList<>();
+            transp_list.addAll(list1);
+            return transp_list;
+        }
 
 
 

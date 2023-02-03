@@ -11,7 +11,6 @@ public class task1 {
             list_initial.add(i);
         }
         System.out.println(list_initial);
-        Transpot_list(list_initial);
         System.out.println(Transpot_list(list_initial));
     }
 

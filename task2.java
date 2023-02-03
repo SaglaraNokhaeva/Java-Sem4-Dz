@@ -31,7 +31,7 @@ public class task2 {
             System.out.println(list_initial.getFirst());
             System.out.println(First(list_initial));            
         }
-        // scan.close();
+        scan.close();
 
     }
 

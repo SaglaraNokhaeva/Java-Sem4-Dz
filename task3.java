@@ -24,23 +24,24 @@ import java.util.Scanner;
 import java.util.Stack;
 
 public class task3 {
+
     public static void main(String[] args) {
         Stack<Float> stack = new Stack<>();
         stack.push(Calcul());
+        // System.out.println(stack);
+        Scanner scan = new Scanner(System.in);
         String str = "";
-        while (!str.equals("выход")) {
-            Scanner scan = new Scanner(System.in);
-            System.out.println("Введите команды: 'выход' для выхода из программы;'отмена' для отмены последней операции; 'калькулятор' для продолжения работы в калькуляторе: ");
+        while (!str.equals("exit")) {
+            System.out.println("Введите команды:'exit' для выхода из программы;'cancel' для отмены последней операции; 'calc' для продолжения работы в калькуляторе: ");
             str = scan.nextLine();
-            if (str.equals("калькулятор")) {
+            if (str.equals("calc")) {
                 stack.push(Calcul());
             }
-            if (str.equals("отмена")) {
+            if (str.equals("cancel")) {
                 System.out.println(stack.pop());
             }
-            scan.close();
         }
-
+        scan.close();
     }
 
     private static Float Calcul() {
@@ -78,4 +79,5 @@ public class task3 {
         System.out.println();
         return rezult;
     }
+
 }

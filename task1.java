@@ -15,10 +15,10 @@ public class task1 {
         System.out.println(Transpot_list(list_initial));
     }
 
-        private static LinkedList<Integer> Transpot_list(LinkedList<Integer> list1) {
+    private static LinkedList<Integer> Transpot_list(LinkedList<Integer> list1) {
         LinkedList<Integer> transp_list = new LinkedList<>();
-        for (int i = list1.size(); i > 0; i--) {
-            transp_list.add(list1.size()-i,list1.get(i));
+        for (int i = 0; i < list1.size(); i++) {
+            transp_list.addLast(list1.get(list1.size() - 1 - i));
         }
         return transp_list;
     }

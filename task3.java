@@ -23,11 +23,29 @@
 import java.util.Scanner;
 import java.util.Stack;
 
-public class task3 {    
+public class task3 {
     public static void main(String[] args) {
+        Stack<Float> stack = new Stack<>();
+        stack.push(Calcul());
+        String str = "";
+        while (!str.equals("выход")) {
+            Scanner scan = new Scanner(System.in);
+            System.out.println("Введите команды: 'выход' для выхода из программы;'отмена' для отмены последней операции; 'калькулятор' для продолжения работы в калькуляторе: ");
+            str = scan.nextLine();
+            if (str.equals("калькулятор")) {
+                stack.push(Calcul());
+            }
+            if (str.equals("отмена")) {
+                System.out.println(stack.pop());
+            }
+            scan.close();
+        }
+
+    }
+
+    private static Float Calcul() {
 
         Scanner iScanner = new Scanner(System.in);
-        Stack <Float> stack = new Stack<>();
 
         System.out.printf("Введите первое число = ");
         float number1 = iScanner.nextInt();
@@ -37,7 +55,7 @@ public class task3 {
 
         System.out.printf("Введите действие (+, -, * или /): ");
         Character act = iScanner.next().charAt(0);
-        Float rezult=(float) 0;
+        Float rezult = (float) 0;
 
         if (act == '+') {
             rezult = number1 + number2;
@@ -56,21 +74,8 @@ public class task3 {
             rezult = number1 / number2;
             System.out.printf("%f : %f = %f", number1, number2, rezult);
         }
-        
-
-        stack.push(rezult);
-
-        private static Float Calc(Float list1) {
-            LinkedList<Integer> transp_list = new LinkedList<>();
-            transp_list.addAll(list1);
-            return transp_list;
-        }
-
-
-
-
-
         iScanner.close();
-
+        System.out.println();
+        return rezult;
     }
 }

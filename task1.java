@@ -4,6 +4,10 @@
 import java.util.LinkedList;
 
 public class task1 {
+
+
+
+
     public static void main(String[] args) {
         LinkedList<Integer> list_initial = new LinkedList<>();
 
@@ -14,6 +18,11 @@ public class task1 {
         System.out.println(Transpot_list(list_initial));
     }
 
+
+
+
+
+
     private static LinkedList<Integer> Transpot_list(LinkedList<Integer> list1) {
         LinkedList<Integer> transp_list = new LinkedList<>();
         for (int i = 0; i < list1.size(); i++) {
@@ -21,4 +30,11 @@ public class task1 {
         }
         return transp_list;
     }
+
+
+
+
+
+
+    
 }

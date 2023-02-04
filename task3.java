@@ -48,7 +48,7 @@ public class task3 {
                 System.out.println(stack.peek());
             }             
         }
-        // iScanner.close();       
+        iScanner.close();       
     }
 
     
@@ -83,9 +83,9 @@ public class task3 {
             rezult = number1 / number2;
             System.out.printf("%f : %f = %f", number1, number2, rezult);
         }
-        // iScanner.close();
         System.out.println();
         return rezult;
+        // iScanner.close();
     }
 
 }

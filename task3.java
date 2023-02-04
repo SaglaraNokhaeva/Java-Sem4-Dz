@@ -21,6 +21,7 @@
 // 9
 
 import java.util.Scanner;
+import java.util.Queue;
 import java.util.Stack;
 
 public class task3 {
@@ -28,22 +29,30 @@ public class task3 {
     public static void main(String[] args) {
         Stack<Float> stack = new Stack<>();
         stack.push(Calcul());
-        // System.out.println(stack);
-        Scanner scan = new Scanner(System.in);
-        String str = "";
-        while (!str.equals("exit")) {
-            System.out.println("Введите команды:'exit' для выхода из программы;'cancel' для отмены последней операции; 'calc' для продолжения работы в калькуляторе: ");
-            str = scan.nextLine();
+       
+        Scanner iScanner = new Scanner(System.in);       
+
+        while (true) {
+
+            System.out.println("Введите команду:'stop' для выхода из программы;'cancel' для отмены последней операции; 'calc' для продолжения работы в калькуляторе: ");
+            String str = iScanner.nextLine();
+            if (str.equals("stop"))
+                break;
+            
             if (str.equals("calc")) {
                 stack.push(Calcul());
             }
+            
             if (str.equals("cancel")) {
+                stack.pop();
                 System.out.println(stack.pop());
-            }
+            } 
+            
         }
-        scan.close();
+        // iScanner.close();       
     }
 
+    
     private static Float Calcul() {
 
         Scanner iScanner = new Scanner(System.in);
@@ -75,7 +84,7 @@ public class task3 {
             rezult = number1 / number2;
             System.out.printf("%f : %f = %f", number1, number2, rezult);
         }
-        iScanner.close();
+        // iScanner.close();
         System.out.println();
         return rezult;
     }

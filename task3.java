@@ -45,7 +45,7 @@ public class task3 {
             
             if (str.equals("cancel")) {
                 stack.pop();
-                System.out.println(stack.pop());
+                System.out.println(stack.peek());
             } 
             
         }
